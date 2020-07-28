@@ -2,15 +2,14 @@
   "name": "express-server-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "lint": "tslint -p tsconfig.json --fix",
-    "tsc": "tsc",
-    "build": "npm-run-all lint tsc",
-    "dev:start": "npm-run-all build start",
-    "dev": "nodemon --watch src -e ts --exec npm run dev:start",
+    "build": "npm-run-all lint test tsc",
+    "dev": "nodemon src/index.ts --watch src -e ts",
+    "lint": "tslint -p tsconfig.json",
     "start": "node .",
-    "test": "jest"
+    "test": "jest",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
