@@ -47,7 +47,6 @@ describe("API tests", () => {
     });
     it("should return 404 when getting a nonexistent memory", async () => {
       const response = await request(app).get("/memory/test");
-      console.log(response.text);
       expect(response.status).toBe(404);
     });
   });
